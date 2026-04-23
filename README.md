@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Team SPD - Member Management Application
 
 ## Project Description
@@ -44,3 +45,6 @@ All API endpoints are prefixed with `http://localhost:5000`
 - `POST /api/members`: Add a new team member. Accepts `multipart/form-data` with fields like name, rollNumber, and an optional `image` file. Let the backend process the image upload using Multer and save the member data to MongoDB.
 - `GET /api/members`: Fetch a list of all team members stored in MongoDB.
 - `GET /api/members/:id`: Fetch detailed information about a single team member using their unique ID.
+=======
+# Team-SPD
+>>>>>>> b65d7b4f43ad0cbc1092c7891f3247f9c60e0cd1
