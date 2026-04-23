@@ -33,6 +33,7 @@ const MemberDetails = () => {
       <header className="page-header">
         <Link to="/" className="header-title">TEAM SPD</Link>
         <nav className="header-nav">
+          <Link to={`/edit/${id}`} className="nav-link" style={{marginRight: '10px', background: '#3b82f6', color: 'white', padding: '0.5rem 1rem', borderRadius: '4px'}}>Edit Member</Link>
           <Link to="/members" className="nav-link">Back to Members</Link>
         </nav>
       </header>

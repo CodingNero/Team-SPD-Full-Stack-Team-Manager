@@ -70,4 +70,38 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+// PUT /api/members/:id - Update a team member
+router.put('/:id', upload.single('image'), async (req, res) => {
+    try {
+        const {
+            name, rollNumber, year, degree, aboutProject,
+            hobbies, certificate, internship, aboutYourAim
+        } = req.body;
+
+        const updateData = {
+            name, rollNumber, year, degree, aboutProject,
+            hobbies, certificate, internship, aboutYourAim
+        };
+
+        if (req.file) {
+            updateData.image = req.file.filename;
+        }
+
+        const updatedMember = await Member.findByIdAndUpdate(
+            req.params.id,
+            updateData,
+            { new: true }
+        );
+
+        if (!updatedMember) {
+            return res.status(404).json({ error: 'Member not found' });
+        }
+
+        res.status(200).json(updatedMember);
+    } catch (error) {
+        console.error('Error updating member:', error);
+        res.status(500).json({ error: 'Failed to update member' });
+    }
+});
+
 module.exports = router;
