@@ -46,5 +46,10 @@ All API endpoints are prefixed with `http://localhost:5000`
 - `GET /api/members`: Fetch a list of all team members stored in MongoDB.
 - `GET /api/members/:id`: Fetch detailed information about a single team member using their unique ID.
 =======
+## Contributors
+- V. Pritham Mukesh Krishna
+- Snehith Chatrathi
+
+Built together as a collaborative ML project.
 # Team-SPD
 >>>>>>> b65d7b4f43ad0cbc1092c7891f3247f9c60e0cd1
